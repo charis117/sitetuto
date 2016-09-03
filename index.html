@@ -14,9 +14,11 @@ body{
 <p>This is my super website and it is free hosted!</p>
 
 <p id="jj">Javascript does not work!</p>
+<p id="result">What I got?</p>
 
 <script>
 document.getElementById("jj").innerText="Javascript is working!";
+document.getElementById("result").innerText=document.href;
 if(document.href.contains("?")){
 var arg=document.href.split("?")[1];
 alert("HERE IS YOUR ARGUMENTS:"+arg);
