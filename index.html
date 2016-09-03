@@ -18,9 +18,9 @@ body{
 
 <script>
 document.getElementById("jj").innerText="Javascript is working!";
-document.getElementById("result").innerText=document.href;
-if(document.href.contains("?")){
-var arg=document.href.split("?")[1];
+document.getElementById("result").innerText=location.href;
+if(location.href.contains("?")){
+var arg=location.href.split("?")[1];
 alert("HERE IS YOUR ARGUMENTS:"+arg);
 document.getElementById("jj").innerText="HERE IS YOUR ARGUMENTS:"+arg;
   
