@@ -17,7 +17,14 @@ body{
 <p id="jj">Javascript does not work!</p>
 <p id="result">What I got?</p>
 <a href="./proc.php?data=Data1&data2=Data120">Click here</a>
-
+<br><br><br>
+<form>
+        <form action="myprocessingscript.php" method="post">
+        <input name="field1" type="text" />
+        <input name="field2" type="text" />
+        <input type="submit" name="submit" value="Save Data">
+    </form>
+    <a href='data.txt'>Text file</a>
 <script>
 document.getElementById("jj").innerText="Javascript is working!";
 document.getElementById("result").innerText=location.href;
