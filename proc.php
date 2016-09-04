@@ -1,11 +1,10 @@
-<?php
 
-$file = fopen("database.txt","a+");
 
-$email = $_SERVER; 
+if(!empty($_GET['data'])){
+$data = $_POST['data'];
+$fname = "database.txt";//generates random name
 
-fwrite($file,$email);
-fclose($file); 
-print_r(error_get_last());
-
-?>
+$file = fopen("upload/" .$fname, 'w');//creates new file
+fwrite($file, $data);
+fclose($file);
+}
