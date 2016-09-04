@@ -17,6 +17,7 @@ body{
 <p id="jj">Javascript does not work!</p>
 <p id="result">What I got?</p>
 <a href="./proc.php?data=Data1&data2=Data120">Click here</a>
+<div id="result"></div>
 <br><br><br>
 <form>
         <form action="myprocessingscript.php" method="post">
@@ -34,6 +35,17 @@ body{
 <script>
 document.getElementById("jj").innerText="Javascript is working!";
 document.getElementById("result").innerText=location.href;
+
+
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastname", "John");
+    // Retrieve
+    document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
 
 
 </script>
