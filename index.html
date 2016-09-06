@@ -16,6 +16,7 @@ body{
 
 <p id="jj">Javascript does not work!</p>
 <p id="result">What I got?</p>
+<p id="resu">What I got?</p>
 <a href="./proc.php?data=Data1&data2=Data120">Click here</a>
 <div id="result"></div>
 <br><br><br>
@@ -79,7 +80,7 @@ if (typeof(Storage) !== "undefined") {
  
       recognition.onresult = function(e) {
 	recognition.stop();
-	dpcument.getElementById("result").innerHTML=(e.results[0][0].transcript);
+	document.getElementById("resu").innerHTML=(e.results[0][0].transcript);
 	var result=e.results[0][0].transcript;
 	if(result=="φασολάδα"){
 	document.write("Σου αρέσει η φασολάδα;;");
