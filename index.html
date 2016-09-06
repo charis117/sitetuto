@@ -79,7 +79,7 @@ if (typeof(Storage) !== "undefined") {
  
       recognition.onresult = function(e) {
 	recognition.stop();
-	dpcument.write(e.results[0][0].transcript);
+	dpcument.getElementById("result").innerHTML=(e.results[0][0].transcript);
 	var result=e.results[0][0].transcript;
 	if(result=="φασολάδα"){
 	document.write("Σου αρέσει η φασολάδα;;");
