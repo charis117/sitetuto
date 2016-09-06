@@ -49,6 +49,52 @@ if (typeof(Storage) !== "undefined") {
 
 
 </script>
+<style>
+  .speech {border: 1px solid #DDD; width: 300px; padding: 0; margin: 0}
+  .speech input {border: 0; width: 240px; display: inline-block; height: 30px;}
+  .speech img {float: right; width: 40px }
+</style>
+ 
+<!-- Search Form -->
+<form id="labnol" method="get" >
+  <div class="speech">
+    <input type="text" name="q" id="transcript" placeholder="Speak" />
+    <img onclick="startDictation()" src="//i.imgur.com/cHidSVu.gif" />
+  </div>
+</form>
+ 
+<!-- HTML5 Speech Recognition API -->
+<script>
+  function startDictation() {
+ 
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+ 
+      var recognition = new webkitSpeechRecognition();
+ 
+      recognition.continuous = false;
+      recognition.interimResults = false;
+ 
+      recognition.lang = "el-GR";
+      recognition.start();
+ 
+      recognition.onresult = function(e) {
+	recognition.stop();
+	dpcument.write(e.results[0][0].transcript);
+	var result=e.results[0][0].transcript;
+	if(result=="φασολάδα"){
+	document.write("Σου αρέσει η φασολάδα;;");
+	}
+        
+        
+      };
+ 
+      recognition.onerror = function(e) {
+        recognition.stop();
+      }
+ 
+    }
+  }
+</script>
 
 
 
