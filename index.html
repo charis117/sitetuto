@@ -38,7 +38,7 @@ body{
 document.getElementById("jj").innerText="Javascript is working!";
 document.getElementById("result").innerText=location.href;
 if(document.cookie==""){
-	var nam=pormpt("Have we met before? What is your name?");
+	var nam=prompt("Have we met before? What is your name?");
 	document.cookie = "username="+nam;
 }else{
 	var name=document.cookie.split("=")[1];
