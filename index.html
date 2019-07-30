@@ -39,7 +39,7 @@ document.getElementById("jj").innerText="Javascript is working!";
 document.getElementById("result").innerText=location.href;
 if(document.cookie==""){
 	var nam=prompt("Have we met before? What is your name?");
-	document.cookie = "username="+nam+";class=C2;theme=light";
+	document.cookie = "username="+nam+" class=C2 theme=light";
 }else{
 	var name=document.cookie.split("=")[1];
 	alert("Hello,"+name+" again");
