@@ -40,9 +40,9 @@ document.getElementById("result").innerText=location.href;
 if(document.cookie==""){
 	var nam=prompt("Have we met before? What is your name?");
 	document.cookie = "username="+nam+";
-	document.cookie="class=C2";
-	document.cookie="theme=light";
-	document.cookie="browser=Google Chrome";
+	document.cookie = "class=C2";
+	document.cookie = "theme=light";
+	document.cookie = "browser=Google Chrome";
 }else{
 	var name=document.cookie.split("=")[1];
 	alert("Hello,"+name+" again");
